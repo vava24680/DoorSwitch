@@ -6,9 +6,9 @@ profile = {
     'dm_name': 'MorSensor',
     'u_name': 'yb',
     'is_sim': False,
-    'df_list': ['Acceleration', 'Temperature'],
+    'df_list': [],
 }
-mac_addr = 'C860008BD249'
+mac_addr = ''
 
 def get_mac_addr():
     from uuid import getnode
