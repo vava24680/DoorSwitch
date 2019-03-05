@@ -9,15 +9,15 @@ int valueInt;
 int Switch_state = 0;
 
 void setup() {
+    pinMode(LED_BUILTIN, OUTPUT);
     pinMode(12, OUTPUT);
-    pinMode(13, OUTPUT);
     Serial.begin(9600);
     Bridge.begin();   // Pins 0 and 1 should be avoided as they are used by the Bridge library.
 }
 
 void loop() {
     Bridge.get("Reg_done",  pin13, 2);
-    digitalWrite(13, atoi(pin13));
+    digitalWrite(LED_BUILTIN, HIGH);
 
     Bridge.get("Open",  valueStr, 2);
     if (strcmp(valueStr,"") != 0){
